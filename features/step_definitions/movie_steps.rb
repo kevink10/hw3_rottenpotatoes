@@ -35,3 +35,7 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
     end
   end
 end
+
+Then /I should see all the movies/ do
+  page.all('table#movies tr').count.should == 11
+end
